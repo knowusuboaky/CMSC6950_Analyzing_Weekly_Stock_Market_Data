@@ -48,8 +48,30 @@ The S\&P 500, or basically the S\&P, is a stock exchange index that evaluates th
 The index is one of the components in calculation of the Conference Board Leading Economic Index, used to predict the course of the economy. The index is related with numerous ticker images, including: \^GSPC, INX, and \$SPX, dependent on marketplace or internet site. The index value is revised each 15 seconds, or 1,559 times per business day, with price upgrade circulated by Reuters (\cite{ref-quote}).
 
 
-
 \section{Materials and Methods}
+\subsection{Logistic Regression}
+Let attempt to comprehend logistic regression by thinking about a logistic model with given parameters, at that point perceiving how the coefficients can be assessed from data. Think about a model with two forecasters, {${\displaystyle x_{1}}$} and {${\displaystyle x_{2}}$}, and single binary (Bernoulli) response variable {${\displaystyle Y}$}, which we represent {${\displaystyle p=P(Y=1)}$}. We believe a linear correlation sandwiched between the predictor variables and the log-odds of the outcome that {${\displaystyle Y=1}$}. This linear correlation* can be written in the ensuing mathematical structure (where {${\displaystyle \ell}$} is the log-{}odds, {${\displaystyle b}$} is the base of the logarithm, and {${\displaystyle \beta _{i}}$} are parameters of the model):
+\begin{equation}
+	{{\displaystyle \ell =\log _{b}{\frac {p}{1-p}}=\beta _{0}+\beta _{1}x_{1}+\beta _{2}x_{2}}}
+\end{equation}
+We can retrieve the log-odds:
+\begin{equation}
+	{{\displaystyle {\frac {p}{1-p}}=b^{\beta _{0}+\beta _{1}x_{1}+\beta _{2}x_{2}}}}.
+\end{equation}
+By straightforward algebraic manipulation, the likelihood that {${\displaystyle Y=1}$} is
+\begin{equation}
+	{{\displaystyle p={\frac {b^{\beta _{0}+\beta _{1}x_{1}+\beta _{2}x_{2}}}{b^{\beta _{0}+\beta _{1}x_{1}+\beta _{2}x_{2}}+1}}={\frac {1}{1+b^{-(\beta _{0}+\beta _{1}x_{1}+\beta _{2}x_{2})}}}}}.
+\end{equation}
+The equation above reveals that as soon as {${\displaystyle \beta _{i}}$} are fixed, we can effortlessly calculate either the log-odds that {${\displaystyle Y=1}$} for a given observation, or the likelihood that {${\displaystyle Y=1}$} for a given observation. The main usage of a logistic model is to be provided an observation {${\displaystyle (x_{1},x_{2})}$}, and calculate the likelihood {${\displaystyle p}$} that {${\displaystyle Y=1}$}. In many applications, the base {${\displaystyle b}$} of the logarithm is generally taken to be {${\displaystyle e}$}. Nevertheless, in some cases it can be simpler to convey results by working in base 2, or base 10 (\cite{ref-wiki:xxx}).
+
+\subsection{Data Collection and Description}
+In this project, the dataset used was downloaded or collected online from \url{https://www.picostat.com/dataset/r-dataset-package-islr-weekly} by executing a pandas python code. \\\\
+This dataset consists of percentage returns for the stock index over 1089 weeks for 21 years, from the beginning of 1990 to the end of 2010.  For each data,  we have the percentage returns for each of the  first previous trading weeks, Lag1 through Lag5.  We have also Volume (the number of shares traded on the previous day, in billions), Today (the percentage return on the date in question) and Direction (whether the market was Up or Down on this date). 
+
+\subsection{Python-Software Packages Used}
+The dataset downloaded was then analyzed mainly using three open source python packages. These packages are Pingouin, Statsmodels and PyCM packages. \\\\
+The Pingouin package was used to determine the structure, summary, correlation, normality of variables in the dataset and also analyze the dataset with the logistic regression model (\cite{ref-software}). The Statsmodel was then used to determine the Confusion matrix of the logistic regression output derived. Lastly, the PyCM package was used to check the performance or accuracy or predictions of these models (\cite{ref-softwaree}).
+
 
 
 \section{Analysis and Results}
