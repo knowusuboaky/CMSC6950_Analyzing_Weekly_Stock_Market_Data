@@ -20,4 +20,5 @@
 \BOOKMARK [2][-]{subsection.3.5}{Interaction Data Model}{section.3}% 20
 \BOOKMARK [3][-]{subsubsection.3.5.1}{Logistic Regression \(Interaction Predictor\)}{subsection.3.5}% 21
 \BOOKMARK [3][-]{subsubsection.3.5.2}{Confusion Matrix and Prediction Analysis}{subsection.3.5}% 22
-\BOOKMARK [1][-]{section.4}{Conclusion}{}% 23
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Performances of Methods with \(Different Combinations of Predictors\)}{subsection.3.5}% 23
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 24

@@ -156,7 +156,7 @@ Today&	0.948765 &  5.252924e-19 &   False \\
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=11 cm]{graphical_summary_of_data.png}
+	\includegraphics[width=12 cm]{graphical_summary_of_data.png}
 	\caption{Graphical Summary of Correlation between Variables}
 	\label{fig_1}
 \end{figure}
@@ -169,7 +169,7 @@ Also, there is no obvious pattern aside that of Volume of shares and years. Look
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=11 cm]{graphical_correlation_analysis.png}
+	\includegraphics[width=12 cm]{graphical_correlation_analysis.png}
 	\caption{Graphical Summary of Correlation between Variables}
 	\label{fig_2}
 \end{figure}
@@ -304,22 +304,39 @@ So then from the variables and summary statistics in the logistic Regression (in
 From PyCM package, $\textbf{55.7\%}$ of the responses are predicted correctly (model accuracy). In other words, $\textbf{44.3\%}$ is the training error rate. The precision is \textbf{56.2\%} which tells that we are able to perform better than baseline.\\\\
 The confusion matrix is telling us that the model does fit the data quite well. The \textbf{"Up"} direction is guessed most of the time. Most of the mistakes come from guessing that the market is going to go up when it really is going to go down. When Up is guessed, it is right \textbf{99.5\%} of the time, when down is guessed it is right \textbf{0.8\%} of the time.
 
+\subsubsection{Performances of Methods with (Different Combinations of Predictors)}
+
+\begin{table}[h!]
+	\centering
+	 \resizebox{\textwidth}{!}{ 
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		Method Performance & Logistic (Full) & Logistic (One Predictor)& Logistic (Interaction) \\ 
+		\hline
+		Overall Fraction of Correct Prediction & 56.1\% & 56.2\%&55.7\% \\ 
+		\hline
+	\end{tabular} 
+}
+\caption{Performances of Methods with (Different Combinations of Predictors)}
+\end{table}
+If we compare the model accuracy (overall fraction of correct prediction), we see that \textbf{Logistic regression (One Predictor)} has the maximum model accuracy (overall fraction of correct prediction), followed by Logistic regression (Full) and Logistic (Interaction). Hence, Logistic regression (One Predictor) gives the best results.
+
+
+
+\section{Conclusion}  \label{Conclusion}
+\begin{enumerate}
+	\item  The research was based on the stock index over 1089 weeks for 21 years, from the beginning of 1990 to the end of 2010.  For each data,  we have recorded the percentage returns for each of the  first previous trading weeks, Lag1 through Lag5.  We have also recorded Volume (the number of shares traded on the previous day, in billions), Today (the percentage return on the date in question) and Direction (whether the market was Up or Down on this date).
+	
+	\item It was seen that there is no obvious pattern aside that of Volume of shares and years. 
+	
+	\item  It is clear that there is high correlation between Volume and Year. This appears to be an exponential relationship where volume increases exponentially as a function of year.
+	
+	\item It was observed that \textbf{Logistic regression (One Predictor)} has the maximum model accuracy (overall fraction of correct prediction), followed by Logistic regression (Full) and Logistic (Interaction). Hence, Logistic regression (One Predictor) gives the best results.
+\end{enumerate}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-\section{Conclusion}
 
 
 
