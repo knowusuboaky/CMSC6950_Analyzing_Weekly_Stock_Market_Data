@@ -191,16 +191,15 @@ Further verification was done with Pingouin correlation package as seen in Table
 \label{table_4}
 \end{table}
 
-\subsection{Full Data Model}
-\subsubsection{Logistic Regression (Full Model)}
-Here, we will fit a logistic regression model in order to predict Direction using Lag1 through Lag5 and Volume.
+\section{Logistic Regression (Full Model)}
 
-\begin{table}[h!]
-\centering
+
+
+
 \begin{tabular}{llrrrrrr}
-\hline
+\toprule
 {} &      names &    coef &      se &       z &    pval &  CI[2.5\%] &  CI[97.5\%] \\
-\hline
+\midrule
 0 &  Intercept &  0.2669 &  0.0859 &  3.1056 &  0.0019 &    0.0984 &     0.4353 \\
 1 &       Lag1 & -0.0413 &  0.0264 & -1.5626 &  0.1181 &   -0.0930 &     0.0105 \\
 2 &       Lag2 &  0.0584 &  0.0269 &  2.1754 &  0.0296 &    0.0058 &     0.1111 \\
@@ -208,52 +207,8 @@ Here, we will fit a logistic regression model in order to predict Direction usin
 4 &       Lag4 & -0.0278 &  0.0265 & -1.0501 &  0.2937 &   -0.0797 &     0.0241 \\
 5 &       Lag5 & -0.0145 &  0.0264 & -0.5485 &  0.5833 &   -0.0662 &     0.0372 \\
 6 &     Volume & -0.0227 &  0.0369 & -0.6163 &  0.5377 &   -0.0951 &     0.0496 \\
-\hline
+\bottomrule
 \end{tabular}
-\caption{Logistic Regression (Full Model) derived using Pingouin Package}
-\label{table_5}
-\end{table}
-
-So then from the variables and summary statistics in the logistic regression model output generated in Table~\ref{table_5}, we can see variables \textbf{Intercept} and \textbf{Lag2} are statistically significant which means their beta coefficients are not equal to zero. 
-
-\subsubsection{Confusion Matrix and Prediction Analysis}
-The Statsmodels and PyCM packages were used to make a prediction as to whether the market will go up or down on a particular day, we must convert these predicted probabilities
-into class labels, \textbf{Up} or \textbf{Down} and create a vector of class predictions based on whether the predicted probability of a market increase.\\\\
-Given these predictions, a confusion matrix was produced in order to determine how many observations were correctly or incorrectly classified. The diagonal elements of the confusion matrix indicate correct predictions, while the off-diagonals represent incorrect predictions.
-
-\newpage
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=9cm]{fullmodel.png}
-	\caption{Full Model Confusion Matrix derived by Statsmodels Package}
-\label{fig_3}
-\end{figure} 
-
-
-In using the PyCM package, it appears as though \textbf{56.1\%} of the responses are predicted correctly (model accuracy). In other words, \textbf{43.9\%} is the training error rate, which is often overly optimistic. The precision is \textbf{56.4\%} which tells that we are able to perform better than baseline.\\\\
-The confusion matrix is telling us that the model does fit the data particularly well. The \textbf{"Up"} direction is guessed most of the time. Most of the mistakes come from guessing that the market is going to go up when it really is going to go down. When Up is guessed, it is right \textbf{92.1\%} of the time, when down is guessed it is right \textbf{11.2\%} of the time.
-
-
-
-\subsection{Reduced Data Model}
-\subsubsection{Logistic Regression (One Predictor)}
-Here, we fit the logistic regression model with Lag2 as the only predictor. 
-
-
-It appears as though $\textbf{62.5\%}$ of the responses are predicted correctly (model accuracy). In other words, $\textbf{37.5\%}$ is the training error rate, which is often overly optimistic. The sensitivity is \textbf{62.2\%} which tells that we are able to perform better than baseline.\\\\
-The confusion matrix is telling us that the model does fit the data particularly well. The \textbf{"Up"} direction is guessed most of the time. Most of the mistakes come from guessing that the market is going to go up when it really is going to go down. When Up is guessed, it is right \textbf{91.8033\%} (56/(56 + 5)) of the time, when down is guessed it is right \textbf{20.9302\%} (9 /(9 + 34)) of the time.
-
-
-
-
-
-
-
-
-
-
-
 
 
 
