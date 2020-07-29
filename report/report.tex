@@ -156,7 +156,7 @@ Today&	0.948765 &  5.252924e-19 &   False \\
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=10 cm]{graphical_summary_of_data.png}
+	\includegraphics[width=11 cm]{graphical_summary_of_data.png}
 	\caption{Graphical Summary of Correlation between Variables}
 	\label{fig_1}
 \end{figure}
@@ -169,7 +169,7 @@ Also, there is no obvious pattern aside that of Volume of shares and years. Look
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=10 cm]{graphical_correlation_analysis.png}
+	\includegraphics[width=11 cm]{graphical_correlation_analysis.png}
 	\caption{Graphical Summary of Correlation between Variables}
 	\label{fig_2}
 \end{figure}
@@ -232,7 +232,7 @@ Given these predictions, a confusion matrix was produced in order to determine h
 
 
 In using the PyCM package, it appears as though \textbf{56.1\%} of the responses are predicted correctly (model accuracy). In other words, \textbf{43.9\%} is the training error rate, which is often overly optimistic. The precision is \textbf{56.4\%} which tells that we are able to perform better than baseline.\\\\
-The confusion matrix is telling us that the model does fit the data particularly well. The \textbf{"Up"} direction is guessed most of the time. Most of the mistakes come from guessing that the market is going to go up when it really is going to go down. When Up is guessed, it is right \textbf{92.1\%} of the time, when down is guessed it is right \textbf{11.2\%} of the time.
+The confusion matrix is telling us that the model does fit the data quite well. The \textbf{"Up"} direction is guessed most of the time. Most of the mistakes come from guessing that the market is going to go up when it really is going to go down. When Up is guessed, it is right \textbf{92.1\%} of the time, when down is guessed it is right \textbf{11.2\%} of the time.
 
 
 
@@ -266,12 +266,45 @@ So then from the variables and summary statistics in the logistic regression mod
 \label{fig_4}
 \end{figure}
 
-It appears as though $\textbf{56.2\%}$ of the responses are predicted correctly (model accuracy). In other words, $\textbf{43.8\%}$ is the training error rate, which is often overly optimistic. The precision is \textbf{56.2\%} which tells that we are able to perform better than baseline.\\\\
+In using the PyCM package, it can be seen that $\textbf{56.2\%}$ of the responses are predicted correctly (model accuracy). In other words, $\textbf{43.8\%}$ is the training error rate. The precision is \textbf{56.2\%} which tells that we are able to perform better than baseline.\\\\
 The confusion matrix is telling us that the model does fit the data particularly well. The \textbf{"Up"} direction is guessed most of the time. Most of the mistakes come from guessing that the market is going to go up when it really is going to go down. When Up is guessed, it is right \textbf{95.7\%} of the time, when down is guessed it is right \textbf{7.8\%} of the time.
 
 
 \subsection{Interaction Data Model}
-\subsubsection{Logistic Regression (Interation Predictors)} 
+\subsubsection{Logistic Regression (Interaction Predictor)} 
+
+Here, we fit the logistic regression model with an interaction between Lag1 and Lag2 as the only predictor. 
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{llrrrrrr}
+		\hline
+	{} &      names &    coef &      se &       z &    pval &  CI[2.5\%] &  CI[97.5\%] \\
+	\hline
+	0 &  Intercept &  0.2257 &  0.0611 &  3.6954 &  0.0002 &    0.1060 &     0.3454 \\
+	1 &      Lag1*Lag2 &  0.0060 &  0.0063 &  0.9519 &  0.3411 &   -0.0063 &     0.0183 \\
+		\hline
+	\end{tabular}
+	\caption{Logistic Regression (Interaction Predictor) dervied by Pingouin Package}
+	\label{table_8}
+\end{table}
+
+So then from the variables and summary statistics in the logistic Regression (interaction predictor) output generated in the table above, we can see that no variable is statistically significant because their p values are greater than 0.05. This also means their beta coefficients are equal to zero.
+
+
+\subsubsection{Confusion Matrix and Prediction Analysis}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=9cm]{intmodel.png}
+	\caption{Interaction Model Confusion Matrix derived by Statsmodels Package}
+	\label{fig_5}
+\end{figure}
+
+From PyCM package, $\textbf{55.7\%}$ of the responses are predicted correctly (model accuracy). In other words, $\textbf{44.3\%}$ is the training error rate. The precision is \textbf{56.2\%} which tells that we are able to perform better than baseline.\\\\
+The confusion matrix is telling us that the model does fit the data quite well. The \textbf{"Up"} direction is guessed most of the time. Most of the mistakes come from guessing that the market is going to go up when it really is going to go down. When Up is guessed, it is right \textbf{99.5\%} of the time, when down is guessed it is right \textbf{0.8\%} of the time.
+
+
 
 
 
