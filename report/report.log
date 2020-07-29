@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.27)  29 JUL 2020 21:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.27)  29 JUL 2020 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,39 +613,49 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 366.
  (./report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 366.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 366.
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: A08074C951CD3359096CA0DD0DAB60D4;1971.
+
+
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: A08074C951CD3359096CA0DD0DAB60D4;1971
+(rerunfilecheck)             After:  BB4E4FF0F83FF49A1286E6DDC333F460;1961.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 366.
  ) 
 Here is how much of TeX's memory you used:
- 10996 strings out of 483183
- 166593 string characters out of 5966292
+ 10997 strings out of 483183
+ 166607 string characters out of 5966292
  451780 words of memory out of 5000000
  25754 multiletter control sequences out of 15000+600000
  546581 words of font info for 51 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,8n,96p,807b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/knowusuboaky/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
-200.600pk> </home/knowusuboaky/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/
-ec/ectt1200.600pk> </home/knowusuboaky/.texlive2019/texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecbx1440.600pk> </home/knowusuboaky/.texlive2019/texmf-var/fonts/pk/
-ljfour/jknappen/ec/ecbx1728.600pk> </home/knowusuboaky/.texlive2019/texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/knowusuboaky/.texlive2019/tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/knowusuboaky/.texlive
-2019/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk> </home/knowusuboaky/
-.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/knowu
-suboaky/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb>
-Output written on report.pdf (11 pages, 853244 bytes).
+ 55i,8n,96p,807b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsubsection.3.5.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+ </home/knowusuboaky/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx120
+0.600pk> </home/knowusuboaky/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec
+/ectt1200.600pk> </home/knowusuboaky/.texlive2019/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx1440.600pk> </home/knowusuboaky/.texlive2019/texmf-var/fonts/pk/lj
+four/jknappen/ec/ecbx1728.600pk> </home/knowusuboaky/.texlive2019/texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/knowusuboaky/.texlive2019/texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/knowusuboaky/.texlive20
+19/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk> </home/knowusuboaky/.t
+exlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/knowusu
+boaky/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb>
+Output written on report.pdf (11 pages, 854571 bytes).
 PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
+ 654 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
