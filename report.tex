@@ -65,7 +65,7 @@ By straightforward algebraic manipulation, the likelihood that {${\displaystyle 
 The equation above reveals that as soon as {${\displaystyle \beta _{i}}$} are fixed, we can effortlessly calculate either the log-odds that {${\displaystyle Y=1}$} for a given observation, or the likelihood that {${\displaystyle Y=1}$} for a given observation. The main usage of a logistic model is to be provided an observation {${\displaystyle (x_{1},x_{2})}$}, and calculate the likelihood {${\displaystyle p}$} that {${\displaystyle Y=1}$}. In many applications, the base {${\displaystyle b}$} of the logarithm is generally taken to be {${\displaystyle e}$}. Nevertheless, in some cases it can be simpler to convey results by working in base 2, or base 10 (\cite{ref-wiki:xxx}).
 
 \subsection{Data Collection and Description}
-In this project, the dataset used was downloaded or collected online from \url{https://www.picostat.com/dataset/r-dataset-package-islr-weekly} by executing a pandas python code. \\\\
+In this project, the dataset used was downloaded or collected online from (\url{https://www.picostat.com/dataset/r-dataset-package-islr-weekly}) by executing a pandas python code. \\\\
 This dataset consists of percentage returns for the stock index over 1089 weeks for 21 years, from the beginning of 1990 to the end of 2010.  For each data,  we have the percentage returns for each of the  first previous trading weeks, Lag1 through Lag5.  We have also Volume (the number of shares traded on the previous day, in billions), Today (the percentage return on the date in question) and Direction (whether the market was Up or Down on this date). 
 
 \subsection{Python-Software Packages Used}
@@ -240,11 +240,38 @@ The confusion matrix is telling us that the model does fit the data particularly
 \subsubsection{Logistic Regression (One Predictor)}
 Here, we fit the logistic regression model with Lag2 as the only predictor. 
 
+\begin{table}[h!]
+\centering
+\begin{tabular}{llrrrrrr}
+\hline
+ &      names &    coef &      se &       z &    pval &  CI[2.5\%] &  CI[97.5\%] \\
+\hline
+0 &  Intercept &  0.2147 &  0.0612 &  3.5072 &  0.0005 &    0.0947 &     0.3347 \\
+1 &       Lag2 &  0.0628 &  0.0264 &  2.3818 &  0.0172 &    0.0111 &     0.1145 \\
+\hline
+\end{tabular}
+\caption{Logistic Regression (Reduced Model) dervied by Pingouin Package}
+\label{table_6}
+\end{table}
 
-It appears as though $\textbf{62.5\%}$ of the responses are predicted correctly (model accuracy). In other words, $\textbf{37.5\%}$ is the training error rate, which is often overly optimistic. The sensitivity is \textbf{62.2\%} which tells that we are able to perform better than baseline.\\\\
-The confusion matrix is telling us that the model does fit the data particularly well. The \textbf{"Up"} direction is guessed most of the time. Most of the mistakes come from guessing that the market is going to go up when it really is going to go down. When Up is guessed, it is right \textbf{91.8033\%} (56/(56 + 5)) of the time, when down is guessed it is right \textbf{20.9302\%} (9 /(9 + 34)) of the time.
+So then from the variables and summary statistics in the logistic regression model (reduced predictor) output generated in Table~\ref{table_6}, we can see that variables \textbf{Intercept} and \textbf{Lag2} are still statistically significant because their p values are less than 0.05. This also means their beta coefficients are not equal to zero.
 
 
+\subsubsection{Confusion Matrix and Prediction Analysis}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=9cm]{onemodel.png}
+	\caption{Reduced Model Confusion Matrix derived by Statsmodels Package}
+\label{fig_4}
+\end{figure}
+
+It appears as though $\textbf{56.2\%}$ of the responses are predicted correctly (model accuracy). In other words, $\textbf{43.8\%}$ is the training error rate, which is often overly optimistic. The precision is \textbf{56.2\%} which tells that we are able to perform better than baseline.\\\\
+The confusion matrix is telling us that the model does fit the data particularly well. The \textbf{"Up"} direction is guessed most of the time. Most of the mistakes come from guessing that the market is going to go up when it really is going to go down. When Up is guessed, it is right \textbf{95.7\%} of the time, when down is guessed it is right \textbf{7.8\%} of the time.
+
+
+\subsection{Interaction Data Model}
+\subsubsection{Logistic Regression (Interation Predictors)} 
 
 
 
