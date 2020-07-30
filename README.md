@@ -1,4 +1,4 @@
-#Project Name
+# Project Name
 Analyzing the Weekly S&P Stock Market Data using Logistic Regression
 
 ## Table of contents
@@ -18,8 +18,7 @@ Project is created with:
 * Pip version: 20.0.2
 
 ## Setup
-
-###Installation
+### Installation
 To run this project, install it locally using pip:
 
 ```
@@ -33,7 +32,7 @@ $ pip install pycm
 $ pip install seaborn
 
 ```
-###Python Packages
+### Python Packages
 * Pandas
 * Numpy
 * Seaborn	
@@ -43,11 +42,11 @@ $ pip install seaborn
 * Wget
 * Csv
 
-###Repository
+### Repository
 * Master: code, test
 * Github page: data, analysis, report, plots, jupyter, FINAL REPORT
 
-###Create the local repository
+### Create the local repository
 
 ```
 $ cd desktop
@@ -57,7 +56,7 @@ $ git remote add origin https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekl
 $ git pull
 
 ```
-###Create your branch
+### Create your branch
 
 * git branch branch_name
 
@@ -74,11 +73,11 @@ $make report.pdf
 
 ```
 
-##Task completed
+## Task completed
 
-###Tasks
+### Tasks
 
-####First task: Analyzing first with jupyter-notebook
+#### First task: Analyzing first with jupyter-notebook
 
 * Download data
 * Check the structure of data
@@ -92,7 +91,7 @@ $make report.pdf
 * Build confusion matrix for three models (statsmodel package)
 * Analyze confusion matrix for three models (PyCM package)
         
-####Second task: Use version control (git) and collaboration tools(GitHub) for the project
+#### Second task: Use version control (git) and collaboration tools(GitHub) for the project
 
 * Rerun all earlier jupyter analysis on (python3 on shell)
 * Create python files for all plots and analysis (.py) 
