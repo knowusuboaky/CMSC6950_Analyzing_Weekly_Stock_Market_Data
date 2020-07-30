@@ -97,8 +97,8 @@ $make report.pdf
 * Re-run all earlier [jupyter analysis](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/jupyter/Analysis_on_Jupyter.ipynb) on (python3 on shell)
 * Create python files for all [plots](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/tree/master/plots) and [analysis](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/tree/master/analysis) (.py) 
 * Create a [LaTeX report](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/report/report.tex) summarizing the results of your project (nano and pdflatex)
-* Implement our entire workflow as a Makefile and project is reproducible.
-* Create a Readme.md file to explain how to use/build your project.
+* Implement our entire workflow as a [Makefile](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/report/Makefile) and project is reproducible.
+* Create a [README.md file](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/README.md) to explain how to use/build your project.
 
 ## Sources
 
