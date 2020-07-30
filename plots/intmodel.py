@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-weekly = pd.read_csv('/home/knowusuboaky/dataset-95529.csv')
+weekly = pd.read_csv('dataset-95529.csv')
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 #Data Changes#

@@ -2,14 +2,15 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-weekly = pd.read_csv('/home/knowusuboaky/dataset-95529.csv')
+weekly = pd.read_csv('dataset-95529.csv')
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 #Data Changes#
 endog = (weekly["Direction"] == "Up").astype("int64")
 exog = sm.add_constant(weekly.drop(columns = ["Direction", "Year", "Today"]))
 
-#Full model Logistic Regression using pinguoin#
+#Full model Logistic Regression using pingouin#
+import pingouin as pg
 logit_full = pg.logistic_regression(exog, endog)
 logit_full.round(4)
 

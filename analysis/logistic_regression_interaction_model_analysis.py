@@ -2,14 +2,15 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-weekly = pd.read_csv('/home/knowusuboaky/dataset-95529.csv')
+weekly = pd.read_csv('dataset-95529.csv')
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 #Data Changes#
 endog = (weekly["Direction"] == "Up").astype("int64")
 exog = sm.add_constant(weekly.drop(columns = ["Direction", "Year", "Today"]))
 
-#Interactions model Logistic Regression using pinguoin#
+#Interactions model Logistic Regression using pingouin#
+import pingouin as pg
 logit_int = pg.logistic_regression(weekly['Lag1'] * weekly['Lag2'], endog)
 logit_int.round(4)
 
