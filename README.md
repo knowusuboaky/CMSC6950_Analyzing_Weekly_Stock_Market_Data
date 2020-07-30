@@ -55,7 +55,6 @@ $ mkdir folderName
 $ git init
 $ git remote add origin https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data
 $ git pull
-
 ```
 ### Create your branch
 
@@ -71,7 +70,6 @@ To run the test case. If there is no reply, that means success.
 $make test
 #To generate files by file name (Ex. report.pdf).
 $make report.pdf
-
 ```
 
 ## Tasks completed
@@ -84,7 +82,6 @@ $make report.pdf
 
 ```
 $wget.download("https://www.picostat.com/system/files/datasets/dataset-95529.csv")
-
 ```
 * Check the structure of data
 
@@ -103,7 +100,6 @@ $weekly.describe()
 $pg.normality (weekly)
 ```
 * Plot the data (seaborn and matplotlib)
-
 ```
 $sns_plot = sns.pairplot(weekly, hue = "Direction");
 ```
@@ -137,7 +133,6 @@ $logit_one.round(4)
 #Interaction model
 $logit_int = pg.logistic_regression(weekly['Lag1'] * weekly['Lag2'], endog)
 $logit_int.round(4)
-
 ```
 * Verify the three models results (statsmodels package)
 
@@ -156,7 +151,6 @@ $print(logit_stat_res_one.summary())
 $logit_stat_int = sm.Logit(endog, sm.add_constant(weekly['Lag1'] * weekly['Lag2']))
 $logit_stat_res_int = logit_stat_int.fit()
 $print(logit_stat_res_int.summary())
-
 ```
 * Build confusion matrix for three models (statsmodel package)
 
@@ -169,7 +163,6 @@ $matrix_one = pd.DataFrame(logit_stat_res_one.pred_table(), columns = ["Down", "
 
 #Interaction model
 $matrix_int = pd.DataFrame(logit_stat_res_int.pred_table(), columns = ["Down", "Up"], index = ["Down", "Up"])
-
 ```
 * Analyze confusion matrix for three models [(PyCM package)](https://doi.org/10.21105/joss.00729)
 
@@ -177,7 +170,6 @@ $matrix_int = pd.DataFrame(logit_stat_res_int.pred_table(), columns = ["Down", "
 $cm_full = ConfusionMatrix(matrix={"Class1": {"Class1": 54, "Class2":430}, "Class2": {"Class1": 48, "Class2": 557}}) 
 $cm_one = ConfusionMatrix(matrix={"Class1": {"Class1": 33, "Class2":451}, "Class2": {"Class1": 26, "Class2": 579}}) 
 $cm_int = ConfusionMatrix(matrix={"Class1": {"Class1": 4, "Class2":480}, "Class2": {"Class1": 3, "Class2": 603}}) 
-
 ```
 
 
