@@ -73,7 +73,7 @@ $make report.pdf
 
 ```
 
-## Task completed
+## Tasks completed
 
 ### Tasks
 
