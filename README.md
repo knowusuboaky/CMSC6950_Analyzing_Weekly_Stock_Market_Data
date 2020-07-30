@@ -1,11 +1,12 @@
 # Project Name
-Analyzing the Weekly S&P Stock Market Data using Logistic Regression
+[Analyzing the Weekly S&P Stock Market Data using Logistic Regression](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/FINAL_REPORT.pdf)
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Tasks completed](#tasks-completed)
+* [Sources](#sources)
 
 ## General info
 This project is a part fulfillment of the requirement for CMSC 6950 (Computer Tools and Applications). The main focus of the project is to analyze the Weekly S &P Stock Market Data using logistic regression. 
@@ -52,7 +53,7 @@ $ pip install seaborn
 $ cd desktop
 $ mkdir folderName
 $ git init
-$ git remote add origin https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data 
+$ [git remote add origin](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data) 
 $ git pull
 
 ```
@@ -79,7 +80,7 @@ $make report.pdf
 
 #### First task: Analyzing first with jupyter-notebook
 
-* Download data
+* Download [data](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/dataset-95529.csv)
 * Check the structure of data
 * Check the data description
 * Check for normality of variables of data (pingouin package)
@@ -93,9 +94,19 @@ $make report.pdf
         
 #### Second task: Use version control (git) and collaboration tools(GitHub) for the project
 
-* Rerun all earlier jupyter analysis on (python3 on shell)
+* Re-run all earlier jupyter analysis on (python3 on shell)
 * Create python files for all plots and analysis (.py) 
 * Create a LaTeX report summarizing the results of your project (nano and pdflatex)
 * Implement our entire workflow as a Makefile and project is reproducible.
 * Create a Readme.md file to explain how to use/build your project.
 
+## Sources
+
+### Data 
+
+* You may download the data used for the project [here](https://www.picostat.com/dataset/r-dataset-package-islr-weekly)
+
+### Software 
+
+* [Vallat, R. (2018). Pingouin: statistics in Python. Journal of Open Source Software](https://doi.org/10.21105/joss.01026)
+* [Haghighi et al., (2018). PyCM: Multiclass confusion matrix library in Python. Journal of Open Source Software](https://doi.org/10.21105/joss.00729)
