@@ -45,7 +45,7 @@ $ pip install seaborn
 
 ### Repository
 * Master: code, test
-* Github page: data, analysis, report, plots, jupyter, FINAL REPORT
+* Github page: [data](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/dataset-95529.csv), [analysis](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/tree/master/analysis), [report](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/tree/master/report), [plots](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/tree/master/plots), [jupyter](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/tree/master/jupyter), FINAL REPORT
 
 ### Create the local repository
 
@@ -53,7 +53,7 @@ $ pip install seaborn
 $ cd desktop
 $ mkdir folderName
 $ git init
-$ [git remote add origin](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data) 
+$ git remote add origin https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data
 $ git pull
 
 ```
@@ -83,19 +83,19 @@ $make report.pdf
 * Download [data](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/dataset-95529.csv)
 * Check the structure of data
 * Check the data description
-* Check for normality of variables of data (pingouin package)
+* Check for normality of variables of data [(pingouin package)](https://doi.org/10.21105/joss.01026)
 * Plot the data (seaborn and matplotlib)
 * Plot the correlated data (matplotlib)
-* Verify correlated data (pingouin package)
-* Build the three models (pingouin package)
+* Verify correlated data [(pingouin package)](https://doi.org/10.21105/joss.01026)
+* Build the three models [(pingouin package)](https://doi.org/10.21105/joss.01026)
 * Verify the three models results (statsmodels package)
 * Build confusion matrix for three models (statsmodel package)
-* Analyze confusion matrix for three models (PyCM package)
+* Analyze confusion matrix for three models [(PyCM package)](https://doi.org/10.21105/joss.00729)
         
 #### Second task: Use version control (git) and collaboration tools(GitHub) for the project
 
-* Re-run all earlier jupyter analysis on (python3 on shell)
-* Create python files for all plots and analysis (.py) 
+* Re-run all earlier [jupyter analysis](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/jupyter/Analysis_on_Jupyter.ipynb) on (python3 on shell)
+* Create python files for all [plots](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/tree/master/plots) and [analysis](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/tree/master/analysis) (.py) 
 * Create a LaTeX report summarizing the results of your project (nano and pdflatex)
 * Implement our entire workflow as a Makefile and project is reproducible.
 * Create a Readme.md file to explain how to use/build your project.
