@@ -80,17 +80,107 @@ $make report.pdf
 
 #### First task: Analyzing first with jupyter-notebook
 
-* Download [data](https://github.com/knowusuboaky/CMSC6950_Analyzing_Weekly_Stock_Market_Data/blob/master/dataset-95529.csv)
+* Download [data](https://www.picostat.com/dataset/r-dataset-package-islr-weekly)
+
+```
+$wget.download("https://www.picostat.com/system/files/datasets/dataset-95529.csv")
+
+```
 * Check the structure of data
+
+```
+$weekly = pd.read_csv('dataset-95529.csv')
+$weekly.head()
+```
 * Check the data description
+
+```
+$weekly.describe()
+```
 * Check for normality of variables of data [(pingouin package)](https://doi.org/10.21105/joss.01026)
+
+```
+$pg.normality (weekly)
+```
 * Plot the data (seaborn and matplotlib)
+
+```
+$sns_plot = sns.pairplot(weekly, hue = "Direction");
+```
 * Plot the correlated data (matplotlib)
+
+```
+$fig = plt.figure(figsize = (10, 8))
+$ax = plt.axes()
+$ax.scatter(x = weekly.index, y = weekly["Volume"], alpha = 0.5)
+$ax.set(xlabel='Year', ylabel='Volume', title='Scatter Plot of Volume and Year')
+$ax.grid()
+```
 * Verify correlated data [(pingouin package)](https://doi.org/10.21105/joss.01026)
+
+```
+$pg.corr(weekly["Year"], weekly["Volume"])
+```
 * Build the three models [(pingouin package)](https://doi.org/10.21105/joss.01026)
+
+```
+#Full model
+$endog = (weekly["Direction"] == "Up").astype("int64")
+$exog = sm.add_constant(weekly.drop(columns = ["Direction", "Year", "Today"]))
+$logit_full = pg.logistic_regression(exog, endog)
+$logit_full.round(4)
+
+#Reduced model
+$logit_one = pg.logistic_regression(weekly['Lag2'], endog)
+$logit_one.round(4)
+
+#Interaction model
+$logit_int = pg.logistic_regression(weekly['Lag1'] * weekly['Lag2'], endog)
+$logit_int.round(4)
+
+```
 * Verify the three models results (statsmodels package)
+
+```
+#Full model
+$logit_stat_full = sm.Logit(endog, exog)
+$logit_stat_res_full = logit_stat_full.fit()
+$print(logit_stat_res_full.summary())
+
+#Reduced model
+$logit_stat_one = sm.Logit(endog, sm.add_constant(weekly['Lag2']))
+$logit_stat_res_one = logit_stat_one.fit()
+$print(logit_stat_res_one.summary())
+
+#Interaction model
+$logit_stat_int = sm.Logit(endog, sm.add_constant(weekly['Lag1'] * weekly['Lag2']))
+$logit_stat_res_int = logit_stat_int.fit()
+$print(logit_stat_res_int.summary())
+
+```
 * Build confusion matrix for three models (statsmodel package)
+
+```
+#Full model
+$matrix_full = pd.DataFrame(logit_stat_res_full.pred_table(), columns = ["Down", "Up"], index = ["Down", "Up"])
+
+#Reduced model
+$matrix_one = pd.DataFrame(logit_stat_res_one.pred_table(), columns = ["Down", "Up"], index = ["Down", "Up"])
+
+#Interaction model
+$matrix_int = pd.DataFrame(logit_stat_res_int.pred_table(), columns = ["Down", "Up"], index = ["Down", "Up"])
+
+```
 * Analyze confusion matrix for three models [(PyCM package)](https://doi.org/10.21105/joss.00729)
+
+```
+$cm_full = ConfusionMatrix(matrix={"Class1": {"Class1": 54, "Class2":430}, "Class2": {"Class1": 48, "Class2": 557}}) 
+$cm_one = ConfusionMatrix(matrix={"Class1": {"Class1": 33, "Class2":451}, "Class2": {"Class1": 26, "Class2": 579}}) 
+$cm_int = ConfusionMatrix(matrix={"Class1": {"Class1": 4, "Class2":480}, "Class2": {"Class1": 3, "Class2": 603}}) 
+
+```
+
+
         
 #### Second task: Use version control (git) and collaboration tools(GitHub) for the project
 
