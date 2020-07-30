@@ -1,4 +1,4 @@
-report.pdf:	summary.png	correlation.png	fullmodel.png	onemodel.png	intmodel.png
+report.pdf:	report.tex	summary.png	correlation.png	fullmodel.png	onemodel.png	intmodel.png
 	pdflatex	$<
 
 #Graphical summary of the data
